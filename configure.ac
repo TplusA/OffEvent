@@ -1,4 +1,4 @@
-dnl Copyright (C) 2015  T+A elektroakustik GmbH & Co. KG
+dnl Copyright (C) 2015, 2018  T+A elektroakustik GmbH & Co. KG
 dnl
 dnl This file is part of OffEvent.
 dnl
@@ -41,6 +41,8 @@ AC_TYPE_SIZE_T
 AC_TYPE_SSIZE_T
 
 # Checks for library functions.
+
+AM_CONDITIONAL([WITH_MARKDOWN], [test "x$ac_cv_prog_MARKDOWN" != "x"])
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
